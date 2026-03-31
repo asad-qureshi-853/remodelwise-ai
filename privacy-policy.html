@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Privacy Policy — RemodelWise AI</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  :root {
+    --gold: #C9973A;
+    --gold2: #E8BE6A;
+    --dark: #0C0C0C;
+    --card: #141414;
+    --border: rgba(201,151,58,0.18);
+    --text: #F0EDE8;
+    --muted: #888;
+  }
+  body { font-family: 'Inter', sans-serif; background: var(--dark); color: var(--text); overflow-x: hidden; }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 999;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 1rem 6%;
+    background: rgba(12,12,12,0.90);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+  }
+  .logo { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 700; color: var(--text); text-decoration: none; }
+  .logo span { color: var(--gold); }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.88rem; transition: color 0.3s; }
+  .nav-links a:hover { color: var(--gold); }
+  .nav-btn { background: var(--gold); color: #000; padding: 0.55rem 1.4rem; border-radius: 50px; font-size: 0.85rem; font-weight: 600; text-decoration: none; transition: all 0.3s; }
+  .nav-btn:hover { background: var(--gold2); transform: translateY(-2px); }
+
+  /* HERO */
+  .page-hero {
+    padding: 9rem 6% 5rem;
+    text-align: center;
+    background:
+      radial-gradient(ellipse 70% 60% at 50% 50%, rgba(201,151,58,0.08) 0%, transparent 65%),
+      var(--dark);
+    position: relative; overflow: hidden;
+  }
+  .page-hero::before {
+    content: ''; position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(201,151,58,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(201,151,58,0.03) 1px, transparent 1px);
+    background-size: 55px 55px;
+  }
+  .hero-inner { position: relative; z-index: 1; max-width: 700px; margin: 0 auto; }
+  .hero-label {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    background: rgba(201,151,58,0.1); border: 1px solid rgba(201,151,58,0.25);
+    color: var(--gold); padding: 0.35rem 1rem; border-radius: 50px;
+    font-size: 0.72rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase;
+    margin-bottom: 1.6rem;
+  }
+  .hero-title { font-family: 'Playfair Display', serif; font-size: clamp(2.5rem, 5vw, 3.8rem); font-weight: 900; line-height: 1.15; margin-bottom: 1.2rem; }
+  .hero-title em { font-style: italic; color: var(--gold); }
+  .hero-desc { font-size: 1rem; line-height: 1.8; color: var(--muted); font-weight: 300; }
+  .hero-date { margin-top: 1rem; font-size: 0.82rem; color: rgba(201,151,58,0.7); font-weight: 500; }
+
+  /* QUICK NAV */
+  .quick-nav { padding: 3rem 6%; background: #0a0a0a; }
+  .quick-inner { max-width: 1100px; margin: 0 auto; }
+  .section-label { font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); font-weight: 500; margin-bottom: 1rem; }
+  .section-title { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 3vw, 2.5rem); font-weight: 700; line-height: 1.2; margin-bottom: 2rem; }
+  .section-title em { font-style: italic; color: var(--gold); }
+  .quick-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+  .quick-card {
+    background: var(--card); border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 14px; padding: 1.2rem 1rem; text-align: center;
+    text-decoration: none; color: var(--text); transition: all 0.3s;
+  }
+  .quick-card:hover { border-color: rgba(201,151,58,0.3); transform: translateY(-3px); background: rgba(201,151,58,0.05); }
+  .quick-icon { font-size: 1.5rem; margin-bottom: 0.6rem; display: block; }
+  .quick-title { font-weight: 600; font-size: 0.82rem; }
+
+  /* CONTENT */
+  .content-section { padding: 5rem 6%; }
+  .content-inner { max-width: 860px; margin: 0 auto; }
+  .policy-block {
+    background: var(--card); border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 20px; padding: 2.5rem; margin-bottom: 1.5rem;
+    transition: border-color 0.3s; position: relative; overflow: hidden;
+  }
+  .policy-block::before {
+    content: ''; position: absolute; top: 0; left: 0; bottom: 0; width: 3px;
+    background: linear-gradient(180deg, var(--gold), var(--gold2));
+  }
+  .policy-block:hover { border-color: rgba(201,151,58,0.2); }
+  .policy-num { font-size: 0.68rem; color: var(--gold); font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 0.6rem; }
+  .policy-title { font-family: 'Playfair Display', serif; font-size: 1.3rem; font-weight: 700; margin-bottom: 1.2rem; color: var(--text); }
+  .policy-text { font-size: 0.9rem; color: var(--muted); line-height: 1.85; font-weight: 300; }
+  .policy-text + .policy-text { margin-top: 1rem; }
+  .policy-list { margin-top: 1rem; display: flex; flex-direction: column; gap: 0.5rem; }
+  .policy-list-item { font-size: 0.88rem; color: var(--muted); display: flex; gap: 0.6rem; line-height: 1.6; }
+  .policy-list-item::before { content: '→'; color: var(--gold); flex-shrink: 0; margin-top: 0.05rem; }
+  .highlight-box {
+    background: rgba(201,151,58,0.06); border: 1px solid rgba(201,151,58,0.2);
+    border-radius: 12px; padding: 1.2rem 1.5rem; margin-top: 1.2rem;
+    font-size: 0.88rem; color: var(--text); line-height: 1.7;
+  }
+  .highlight-box strong { color: var(--gold); }
+
+  /* CONTACT */
+  .contact-section {
+    padding: 5rem 6%;
+    background: radial-gradient(ellipse 80% 80% at 50% 50%, rgba(201,151,58,0.06) 0%, transparent 70%), var(--dark);
+    text-align: center;
+  }
+  .contact-inner { max-width: 800px; margin: 0 auto; }
+  .contact-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-top: 3rem; }
+  .contact-card {
+    display: flex; align-items: center; gap: 1.2rem;
+    background: var(--card); border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 16px; padding: 1.6rem 2rem;
+    text-decoration: none; color: var(--text);
+    transition: all 0.3s; text-align: left;
+  }
+  .contact-card:hover { border-color: rgba(201,151,58,0.35); transform: translateY(-4px); background: rgba(201,151,58,0.05); }
+  .cc-icon { width: 52px; height: 52px; flex-shrink: 0; background: rgba(201,151,58,0.1); border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; }
+  .cc-label { font-size: 0.68rem; color: var(--gold); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.3rem; }
+  .cc-value { font-size: 0.92rem; font-weight: 500; }
+  .cc-sub { font-size: 0.75rem; color: var(--muted); margin-top: 0.2rem; }
+
+  /* FOOTER */
+  footer {
+    background: var(--dark); border-top: 1px solid rgba(255,255,255,0.06);
+    padding: 2rem 6%;
+    display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;
+  }
+  footer p { font-size: 0.82rem; color: var(--muted); }
+  footer a { color: var(--gold); text-decoration: none; font-size: 0.82rem; }
+  .footer-links { display: flex; gap: 1.5rem; }
+
+  /* ANIMATIONS */
+  .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
+  .reveal.on { opacity: 1; transform: translateY(0); }
+  .d1{transition-delay:0.1s} .d2{transition-delay:0.2s} .d3{transition-delay:0.3s} .d4{transition-delay:0.15s}
+
+  /* RESPONSIVE */
+  @media (max-width: 960px) {
+    .nav-links { display: none; }
+    .quick-grid { grid-template-columns: repeat(2, 1fr); }
+    .contact-grid { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 580px) {
+    nav { padding: 1rem 4%; }
+    .page-hero, .quick-nav, .content-section, .contact-section { padding-left: 4%; padding-right: 4%; }
+    .policy-block { padding: 1.8rem 1.5rem; }
+    footer { flex-direction: column; text-align: center; padding: 1.5rem 4%; }
+    .footer-links { justify-content: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="logo">Remodel<span>Wise</span> AI</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="support.html">Support</a></li>
+    <li><a href="privacy-policy.html" style="color:var(--gold)">Privacy Policy</a></li>
+    <li><a href="terms.html">Terms</a></li>
+  </ul>
+  <a href="https://apps.apple.com/pk/app/remodelwise-ai-interior-design/id6760697003" class="nav-btn">Download Free</a>
+</nav>
+
+<!-- HERO -->
+<section class="page-hero">
+  <div class="hero-inner">
+    <div class="hero-label">🔒 &nbsp; Legal</div>
+    <h1 class="hero-title">Privacy <em>Policy</em></h1>
+    <p class="hero-desc">We are committed to protecting your privacy. This policy explains how RemodelWise AI collects, uses, and safeguards your personal information.</p>
+    <div class="hero-date">Last Updated: January 1, 2025 &nbsp;·&nbsp; Effective: January 1, 2025</div>
+  </div>
+</section>
+
+<!-- QUICK NAV -->
+<section class="quick-nav">
+  <div class="quick-inner">
+    <div class="reveal">
+      <p class="section-label">Jump To Section</p>
+      <h2 class="section-title">What's <em>Covered</em></h2>
+    </div>
+    <div class="quick-grid">
+      <a href="#info-collect" class="quick-card reveal d1"><span class="quick-icon">📋</span><div class="quick-title">Information We Collect</div></a>
+      <a href="#how-use" class="quick-card reveal d2"><span class="quick-icon">⚙️</span><div class="quick-title">How We Use It</div></a>
+      <a href="#sharing" class="quick-card reveal d3"><span class="quick-icon">🤝</span><div class="quick-title">Data Sharing</div></a>
+      <a href="#your-rights" class="quick-card reveal d4"><span class="quick-icon">🛡️</span><div class="quick-title">Your Rights</div></a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTENT -->
+<section class="content-section">
+  <div class="content-inner">
+
+    <!-- Intro -->
+    <div class="policy-block reveal">
+      <div class="policy-num">Introduction</div>
+      <h2 class="policy-title">Welcome to RemodelWise AI</h2>
+      <p class="policy-text">RemodelWise AI ("we", "our", or "us") operates the RemodelWise AI mobile application (the "App"). This Privacy Policy informs you of our policies regarding the collection, use, and disclosure of personal data when you use our App and the choices you have associated with that data.</p>
+      <p class="policy-text">By using the App, you agree to the collection and use of information in accordance with this policy. If you do not agree with the terms of this Privacy Policy, please do not use the App.</p>
+      <div class="highlight-box"><strong>Your privacy matters to us.</strong> We collect only what is necessary to provide you with the best interior design experience and never sell your personal data to third parties.</div>
+    </div>
+
+    <!-- Information We Collect -->
+    <div class="policy-block reveal" id="info-collect">
+      <div class="policy-num">Section 01</div>
+      <h2 class="policy-title">Information We Collect</h2>
+      <p class="policy-text">We collect several different types of information for various purposes to provide and improve our service to you:</p>
+      <div class="policy-list">
+        <div class="policy-list-item"><strong style="color:var(--text);margin-right:0.3rem">Photos & Images:</strong> Room photos you upload for AI redesign processing. These are used solely to generate your design and are not stored permanently.</div>
+        <div class="policy-list-item"><strong style="color:var(--text);margin-right:0.3rem">Device Information:</strong> Device type, operating system version, unique device identifiers, and mobile network information.</div>
+        <div class="policy-list-item"><strong style="color:var(--text);margin-right:0.3rem">Usage Data:</strong> Information about how you use the App, including features used, designs generated, and time spent in the App.</div>
+        <div class="policy-list-item"><strong style="color:var(--text);margin-right:0.3rem">Account Information:</strong> If you create an account, we collect your name and email address.</div>
+        <div class="policy-list-item"><strong style="color:var(--text);margin-right:0.3rem">Purchase Information:</strong> Details of in-app purchases and subscription status (payment details are handled by Apple and never stored by us).</div>
+        <div class="policy-list-item"><strong style="color:var(--text);margin-right:0.3rem">Crash Reports:</strong> Diagnostic data to help us identify and fix issues with the App.</div>
+      </div>
+    </div>
+
+    <!-- How We Use -->
+    <div class="policy-block reveal" id="how-use">
+      <div class="policy-num">Section 02</div>
+      <h2 class="policy-title">How We Use Your Information</h2>
+      <p class="policy-text">RemodelWise AI uses the collected data for the following purposes:</p>
+      <div class="policy-list">
+        <div class="policy-list-item">To provide, maintain, and improve our AI interior design service</div>
+        <div class="policy-list-item">To process your room photos and generate AI redesign results</div>
+        <div class="policy-list-item">To manage your account and subscription</div>
+        <div class="policy-list-item">To send you important notifications about the App and your account</div>
+        <div class="policy-list-item">To analyze usage patterns and improve the user experience</div>
+        <div class="policy-list-item">To detect and prevent fraud, abuse, or other harmful activities</div>
+        <div class="policy-list-item">To comply with legal obligations</div>
+        <div class="policy-list-item">To respond to your support requests and inquiries</div>
+      </div>
+    </div>
+
+    <!-- Data Sharing -->
+    <div class="policy-block reveal" id="sharing">
+      <div class="policy-num">Section 03</div>
+      <h2 class="policy-title">Data Sharing & Third Parties</h2>
+      <p class="policy-text">We do not sell, trade, or rent your personal information to third parties. We may share your data only in the following limited circumstances:</p>
+      <div class="policy-list">
+        <div class="policy-list-item"><strong style="color:var(--text);margin-right:0.3rem">Service Providers:</strong> We use trusted third-party companies to help operate the App (cloud hosting, analytics). They are bound by confidentiality agreements.</div>
+        <div class="policy-list-item"><strong style="color:var(--text);margin-right:0.3rem">Google AdMob:</strong> We use AdMob to show ads. AdMob may collect device data to show relevant ads. You can opt out via your device ad settings.</div>
+        <div class="policy-list-item"><strong style="color:var(--text);margin-right:0.3rem">Apple:</strong> In-app purchases and subscriptions are processed by Apple. Their privacy policy applies to payment data.</div>
+        <div class="policy-list-item"><strong style="color:var(--text);margin-right:0.3rem">Legal Requirements:</strong> We may disclose your information if required by law or to protect the rights and safety of our users.</div>
+      </div>
+      <div class="highlight-box"><strong>We never sell your data.</strong> Your room photos and personal information are never shared with advertisers or sold to any third party.</div>
+    </div>
+
+    <!-- Data Storage -->
+    <div class="policy-block reveal">
+      <div class="policy-num">Section 04</div>
+      <h2 class="policy-title">Data Storage & Security</h2>
+      <p class="policy-text">We take the security of your data seriously and implement appropriate technical and organizational measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction.</p>
+      <div class="policy-list">
+        <div class="policy-list-item">Room photos you upload are processed securely and deleted from our servers after your design is generated</div>
+        <div class="policy-list-item">All data transmission is encrypted using industry-standard SSL/TLS protocols</div>
+        <div class="policy-list-item">We store your data on secure servers with restricted access</div>
+        <div class="policy-list-item">We retain your account data only as long as your account is active or as needed to provide services</div>
+      </div>
+    </div>
+
+    <!-- Children -->
+    <div class="policy-block reveal">
+      <div class="policy-num">Section 05</div>
+      <h2 class="policy-title">Children's Privacy</h2>
+      <p class="policy-text">RemodelWise AI is not directed at children under the age of 13. We do not knowingly collect personal information from children under 13. If you are a parent or guardian and you are aware that your child has provided us with personal data, please contact us immediately.</p>
+      <p class="policy-text">If we become aware that we have collected personal data from a child under 13 without verification of parental consent, we will take steps to remove that information from our servers.</p>
+    </div>
+
+    <!-- Your Rights -->
+    <div class="policy-block reveal" id="your-rights">
+      <div class="policy-num">Section 06</div>
+      <h2 class="policy-title">Your Rights & Choices</h2>
+      <p class="policy-text">You have the following rights regarding your personal data:</p>
+      <div class="policy-list">
+        <div class="policy-list-item"><strong style="color:var(--text);margin-right:0.3rem">Access:</strong> You can request a copy of the personal data we hold about you</div>
+        <div class="policy-list-item"><strong style="color:var(--text);margin-right:0.3rem">Correction:</strong> You can request that we correct any inaccurate data we hold about you</div>
+        <div class="policy-list-item"><strong style="color:var(--text);margin-right:0.3rem">Deletion:</strong> You can request that we delete your personal data (subject to certain legal exceptions)</div>
+        <div class="policy-list-item"><strong style="color:var(--text);margin-right:0.3rem">Opt-out of Ads:</strong> You can opt out of personalized ads through your device settings</div>
+        <div class="policy-list-item"><strong style="color:var(--text);margin-right:0.3rem">Delete Account:</strong> You can delete your account at any time from within the App settings</div>
+      </div>
+      <div class="highlight-box">To exercise any of these rights, contact us at <strong>nasir.developer@icloud.com</strong> and we will respond within 30 days.</div>
+    </div>
+
+    <!-- Changes -->
+    <div class="policy-block reveal">
+      <div class="policy-num">Section 07</div>
+      <h2 class="policy-title">Changes to This Policy</h2>
+      <p class="policy-text">We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date at the top of this policy.</p>
+      <p class="policy-text">You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page. Your continued use of the App after any changes constitutes your acceptance of the new Privacy Policy.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-section" id="contact">
+  <div class="contact-inner">
+    <div class="reveal">
+      <p class="section-label">Questions About Privacy?</p>
+      <h2 class="section-title" style="font-family:'Playfair Display',serif;font-size:clamp(2rem,3.5vw,3rem);font-weight:700">Contact <em style="font-style:italic;color:var(--gold)">Our Team</em></h2>
+      <p style="color:var(--muted);font-size:0.95rem;line-height:1.8;margin-top:0.8rem">If you have any questions about this Privacy Policy or how we handle your data, please reach out to us.</p>
+    </div>
+    <div class="contact-grid reveal d2">
+      <a href="mailto:nasir.developer@icloud.com" class="contact-card">
+        <div class="cc-icon">✉️</div>
+        <div>
+          <div class="cc-label">Email Us</div>
+          <div class="cc-value">nasir.developer@icloud.com</div>
+          <div class="cc-sub">We reply within 24 hours</div>
+        </div>
+      </a>
+      <a href="tel:+923145608010" class="contact-card">
+        <div class="cc-icon">📱</div>
+        <div>
+          <div class="cc-label">Call / WhatsApp</div>
+          <div class="cc-value">+92 314 5608010</div>
+          <div class="cc-sub">Mon–Sat, 9am–6pm PKT</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <a href="index.html" class="logo" style="font-size:1.1rem">Remodel<span>Wise</span> AI</a>
+  <p>© 2025 RemodelWise AI. All rights reserved.</p>
+  <div class="footer-links">
+    <a href="privacy-policy.html">Privacy Policy</a>
+    <a href="terms.html">Terms & Conditions</a>
+    <a href="support.html">Support</a>
+  </div>
+</footer>
+
+<script>
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('on'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>
